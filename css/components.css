@@ -1,0 +1,27 @@
+.menu {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.menu li {
+  color: #8e9abb;
+  padding: 12px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.menu li.active {
+  color: #c4f8ff;
+  background: rgba(56, 210, 248, 0.12);
+}
+
+.card, .panel {
+  background: #1a243f;
+  border-radius: 22px;
+  padding: 18px;
+}
+
+button {
+  cursor: pointer;
+}

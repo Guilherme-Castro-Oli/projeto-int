@@ -13,7 +13,7 @@ function getSavedTheme() {
 
 function saveTheme(theme) {
   try { localStorage.setItem("preferredTheme", theme); }
-  catch {}
+  catch { }
 }
 
 function applyTheme(theme) {

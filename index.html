@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PROJETO INTEGRADOR</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
+
   <div class="layout">
     <aside class="sidebar">
       <div class="brand">
-        <h1>PROJETO INTEGRADOR</h1>
+        <h1>NOME DO PROJETO</h1>
       </div>
 
       <ul class="menu">
@@ -25,6 +32,8 @@
       </ul>
     </aside>
 
+    <!-- header/top bar -->
+
     <main class="content">
       <header class="topbar">
         <input type="search" placeholder="Buscar módulos...">
@@ -34,7 +43,7 @@
         </div>
         <div class="profile">
           <div class="profile-meta">
-            <strong>Illuminati</strong>
+            <strong>Nome do usuario</strong>
             <p>DESENVOLVEDOR SÊNIOR</p>
           </div>
           <div class="profile-auth">
@@ -43,12 +52,16 @@
         </div>
       </header>
 
+      <!--aba lateral codigo de cada parte -->
+
+      <!--parte dashboard -->
       <section class="page active" id="dashboard">
         <div class="hero">
           <div>
             <p class="label">VISÃO OPERACIONAL</p>
             <h2>Dashboard de Desempenho</h2>
-            <p class="subtitle">Acompanhe o progresso dos treinamentos obrigatórios, as pendências por área e a evolução da equipe.</p>
+            <p class="subtitle">Acompanhe o progresso dos treinamentos obrigatórios, as pendências por área e a evolução
+              da equipe.</p>
           </div>
           <div class="stats">
             <article>
@@ -101,12 +114,15 @@
         </div>
       </section>
 
+      <!-- parte treinamentos -->
+
       <section class="page" id="trainings">
         <section class="hero">
           <div>
             <p class="label">TRILHA PERSONALIZADA</p>
             <h2>Treinamentos Disponíveis</h2>
-            <p class="subtitle">Aprimore habilidades técnicas e comportamentais com módulos obrigatórios para alto desempenho.</p>
+            <p class="subtitle">Aprimore habilidades técnicas e comportamentais com módulos obrigatórios para alto
+              desempenho.</p>
           </div>
           <div class="stats">
             <article>
@@ -194,6 +210,8 @@
         </section>
       </section>
 
+      <!-- parte ranking -->
+
       <section class="page" id="leaderboard">
         <div class="hero">
           <div>
@@ -228,6 +246,8 @@
           </article>
         </div>
       </section>
+
+      <!-- parte da configurações -->
 
       <section class="page" id="settings">
         <div class="settings-page">
@@ -275,6 +295,7 @@ Instrutor líder da Lab Alpha.</textarea>
               </div>
             </article>
 
+            <!-- modo claro -->
             <article class="panel settings-card preferences-card">
               <h3><span class="settings-icon">≡</span>Preferências</h3>
               <div class="settings-option-block">
@@ -313,32 +334,6 @@ Instrutor líder da Lab Alpha.</textarea>
                 <b>›</b>
               </button>
             </article>
-
-            <article class="panel settings-card gamification-card">
-              <span class="admin-badge">Acesso admin</span>
-              <h3><span class="settings-icon magic">✣</span>Ajuste de Gamificação</h3>
-              <div class="multiplier">
-                <span>Multiplicador de pontos XP</span>
-                <strong>x1,75</strong>
-              </div>
-              <div class="settings-progress">
-                <i style="width: 75%"></i>
-              </div>
-              <div class="progress-labels">
-                <span>Padrão</span>
-                <span>Intenso</span>
-              </div>
-              <label class="switch-row wide">
-                <span>Visibilidade global de emblemas</span>
-                <input type="checkbox" checked aria-label="Visibilidade global de emblemas">
-                <i></i>
-              </label>
-              <label class="switch-row wide">
-                <span>Redefinição de prestígio ativada</span>
-                <input type="checkbox" aria-label="Redefinição de prestígio ativada">
-                <i></i>
-              </label>
-            </article>
           </div>
 
           <footer class="settings-actions">
@@ -347,6 +342,9 @@ Instrutor líder da Lab Alpha.</textarea>
           </footer>
         </div>
       </section>
+
+      <!-- parte admin é para ser oculta ao usuario -->
+      <!-- parte para mexer nos dois -->
 
       <section class="page" id="admin">
         <div class="admin-page">
@@ -380,7 +378,8 @@ Instrutor líder da Lab Alpha.</textarea>
             <div class="admin-dashboard">
               <article class="admin-status">
                 <h4>Status dos treinamentos</h4>
-                <button class="status-ring" type="button" data-admin-detail="status" aria-label="Abrir detalhes dos status dos treinamentos">
+                <button class="status-ring" type="button" data-admin-detail="status"
+                  aria-label="Abrir detalhes dos status dos treinamentos">
                   <span>12</span>
                   <small>módulos</small>
                 </button>
@@ -435,7 +434,8 @@ Instrutor líder da Lab Alpha.</textarea>
                 <span>Detalhes do administrador</span>
                 <h4 data-admin-title>Selecione um item</h4>
               </div>
-              <p data-admin-description>Clique em uma métrica, no status ou em um colaborador para abrir informações administrativas detalhadas.</p>
+              <p data-admin-description>Clique em uma métrica, no status ou em um colaborador para abrir informações
+                administrativas detalhadas.</p>
             </aside>
 
             <div class="admin-modal" hidden role="dialog" aria-modal="true" aria-labelledby="admin-modal-title">
@@ -452,10 +452,16 @@ Instrutor líder da Lab Alpha.</textarea>
               </section>
             </div>
           </section>
+
+
         </div>
-      </section>
+
+
     </main>
+
+
   </div>
   <script src="script.js"></script>
 </body>
+
 </html>

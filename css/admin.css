@@ -1,0 +1,22 @@
+.admin-area {
+  margin-top: 28px;
+  background: rgba(19, 23, 35, 0.92);
+  padding: 28px;
+}
+
+.admin-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.admin-metric {
+  padding: 20px;
+  border-radius: 8px;
+  background: #1b1f2d;
+}
+
+.admin-modal {
+  position: fixed;
+  inset: 0;
+}
