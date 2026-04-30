@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROJETO INTEGRADOR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>PROJETO INTEGRADOR</h1>
+      </div>
+
+      <ul class="menu">
+        <li class="active" data-page="dashboard">Dashboard</li>
+        <li data-page="trainings">Treinamentos</li>
+        <li data-page="leaderboard">Ranking</li>
+        <li data-page="settings">Configurações</li>
+        <li data-page="admin">Administrador</li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <input type="search" placeholder="Buscar módulos...">
+        <div class="tabs">
+          <button class="tab active">Módulos</button>
+          <button class="tab">Recursos</button>
+        </div>
+        <div class="profile">
+          <div class="profile-meta">
+            <strong>Illuminati</strong>
+            <p>DESENVOLVEDOR SÊNIOR</p>
+          </div>
+          <div class="profile-auth">
+            <div class="avatar">AC</div>
+          </div>
+        </div>
+      </header>
+
+      <section class="page active" id="dashboard">
+        <div class="hero">
+          <div>
+            <p class="label">VISÃO OPERACIONAL</p>
+            <h2>Dashboard de Desempenho</h2>
+            <p class="subtitle">Acompanhe o progresso dos treinamentos obrigatórios, as pendências por área e a evolução da equipe.</p>
+          </div>
+          <div class="stats">
+            <article>
+              <span>MÓDULOS ATIVOS</span>
+              <strong>24</strong>
+            </article>
+            <article>
+              <span>CONCLUSÃO MÉDIA</span>
+              <strong>78%</strong>
+            </article>
+          </div>
+        </div>
+
+        <div class="section-grid">
+          <article class="panel">
+            <span class="status concluido">CONCLUÍDO</span>
+            <h3>Segurança da Informação</h3>
+            <p>Boas práticas de proteção, acesso e confidencialidade.</p>
+            <div class="meta"><span>45 min</span><span>+500 XP</span></div>
+            <div class="progress"><i style="width: 100%"></i></div>
+          </article>
+          <article class="panel">
+            <span class="status em-andamento">EM ANDAMENTO</span>
+            <h3>Compliance</h3>
+            <p>Ética, conduta e conformidade regulatória no ambiente corporativo.</p>
+            <div class="meta"><span>2,5 horas</span><span>+1200 XP</span></div>
+            <div class="progress"><i style="width: 64%"></i></div>
+          </article>
+          <article class="panel">
+            <span class="status nao-iniciado">NÃO INICIADO</span>
+            <h3>Processos Internos</h3>
+            <p>Padronização de rotinas, fluxos e comunicação entre áreas.</p>
+            <div class="meta"><span>1,5 horas</span><span>+800 XP</span></div>
+            <div class="progress"><i style="width: 0%"></i></div>
+          </article>
+          <article class="panel">
+            <span class="status nao-iniciado">NÃO INICIADO</span>
+            <h3>Governança</h3>
+            <p>Diretrizes para decisão, transparência e prestação de contas.</p>
+            <div class="meta"><span>2 horas</span><span>+900 XP</span></div>
+            <div class="progress"><i style="width: 0%"></i></div>
+          </article>
+          <article class="panel">
+            <span class="status em-andamento">EM ANDAMENTO</span>
+            <h3>Boas Práticas Técnicas</h3>
+            <p>Padrões de código, qualidade, testes e segurança em entregas.</p>
+            <div class="meta"><span>3 horas</span><span>+1400 XP</span></div>
+            <div class="progress"><i style="width: 36%"></i></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="page" id="trainings">
+        <section class="hero">
+          <div>
+            <p class="label">TRILHA PERSONALIZADA</p>
+            <h2>Treinamentos Disponíveis</h2>
+            <p class="subtitle">Aprimore habilidades técnicas e comportamentais com módulos obrigatórios para alto desempenho.</p>
+          </div>
+          <div class="stats">
+            <article>
+              <span>XP GANHO</span>
+              <strong>12,4k</strong>
+            </article>
+            <article>
+              <span>RANKING GLOBAL</span>
+              <strong>#08</strong>
+            </article>
+          </div>
+        </section>
+
+        <section class="filters">
+          <div class="chips">
+            <span class="filter-label">FILTRAR POR:</span>
+            <button class="chip active" type="button" data-filter="todos">Todos</button>
+            <button class="chip" type="button" data-filter="nao-iniciado">Não iniciados</button>
+            <button class="chip" type="button" data-filter="em-andamento">Em andamento</button>
+            <button class="chip" type="button" data-filter="concluido">Concluídos</button>
+          </div>
+          <button class="chip select" type="button">Todas as categorias</button>
+        </section>
+
+        <section class="cards">
+          <article class="card done" data-status="concluido">
+            <span class="status concluido">CONCLUÍDO</span>
+            <h3>Segurança da Informação</h3>
+            <p>Boas práticas de proteção, acesso e confidencialidade.</p>
+            <div class="meta">
+              <span>45 min</span>
+              <span>+500 XP</span>
+            </div>
+            <div class="progress"><i style="width:100%"></i></div>
+            <button>Revisar módulo</button>
+          </article>
+
+          <article class="card progress-card" data-status="em-andamento">
+            <span class="status em-andamento">EM ANDAMENTO</span>
+            <h3>Compliance</h3>
+            <p>Ética, conduta e conformidade regulatória no ambiente corporativo.</p>
+            <div class="meta">
+              <span>2,5 horas</span>
+              <span>+1200 XP</span>
+            </div>
+            <div class="progress"><i style="width:64%"></i></div>
+            <button>Continuar treinamento</button>
+          </article>
+
+          <article class="card not-started" data-status="nao-iniciado">
+            <span class="status nao-iniciado">NÃO INICIADO</span>
+            <h3>Processos Internos</h3>
+            <p>Padronização de rotinas, fluxos e comunicação entre áreas.</p>
+            <div class="meta">
+              <span>1,5 horas</span>
+              <span>+800 XP</span>
+            </div>
+            <div class="progress"><i style="width:0%"></i></div>
+            <button>Iniciar agora</button>
+          </article>
+
+          <article class="card governance" data-status="nao-iniciado">
+            <span class="status nao-iniciado">NÃO INICIADO</span>
+            <h3>Governança</h3>
+            <p>Diretrizes para decisão, transparência e prestação de contas.</p>
+            <div class="meta">
+              <span>2 horas</span>
+              <span>+900 XP</span>
+            </div>
+            <div class="progress"><i style="width:0%"></i></div>
+            <button>Iniciar agora</button>
+          </article>
+
+          <article class="card tech" data-status="em-andamento">
+            <span class="status em-andamento">EM ANDAMENTO</span>
+            <h3>Boas Práticas Técnicas</h3>
+            <p>Padrões de código, qualidade, testes e segurança em entregas.</p>
+            <div class="meta">
+              <span>3 horas</span>
+              <span>+1400 XP</span>
+            </div>
+            <div class="progress"><i style="width:36%"></i></div>
+            <button>Continuar treinamento</button>
+          </article>
+        </section>
+      </section>
+
+      <section class="page" id="leaderboard">
+        <div class="hero">
+          <div>
+            <p class="label">DESEMPENHO GLOBAL</p>
+            <h2>Ranking por Colaborador</h2>
+            <p class="subtitle">Visualize pontuação, ritmo de conclusão e engajamento nos módulos obrigatórios.</p>
+          </div>
+          <div class="stats">
+            <article>
+              <span>MAIOR PONTUAÇÃO</span>
+              <strong>18,9k</strong>
+            </article>
+            <article>
+              <span>SUA POSIÇÃO</span>
+              <strong>#08</strong>
+            </article>
+          </div>
+        </div>
+
+        <div class="list">
+          <article class="list-row">
+            <span>#01</span><strong>Ana Costa</strong><em>Compliance e Governança</em><b>18,9k XP</b>
+          </article>
+          <article class="list-row">
+            <span>#02</span><strong>Pedro Lima</strong><em>Segurança da Informação</em><b>17,2k XP</b>
+          </article>
+          <article class="list-row me">
+            <span>#08</span><strong>Alex Chen</strong><em>Boas Práticas Técnicas</em><b>12,4k XP</b>
+          </article>
+          <article class="list-row">
+            <span>#09</span><strong>Marina Alves</strong><em>Processos Internos</em><b>11,8k XP</b>
+          </article>
+        </div>
+      </section>
+
+      <section class="page" id="settings">
+        <div class="settings-page">
+          <header class="settings-heading">
+            <h2>Configurações do <span>Sistema</span></h2>
+            <p>Configure seu acesso neural e os parâmetros do ambiente de trabalho.</p>
+          </header>
+
+          <div class="settings-board">
+            <article class="panel settings-card identity-card">
+              <div class="settings-card-header">
+                <div>
+                  <h3>Perfil e Identidade</h3>
+                  <p>Gerencie sua presença pública e credenciais profissionais.</p>
+                </div>
+                <button class="settings-mini-button">Editar avatar</button>
+              </div>
+
+              <div class="profile-editor">
+                <div class="avatar-editor" aria-label="Avatar atual">
+                  <div class="avatar-face">
+                    <span class="hair"></span>
+                    <span class="head"></span>
+                    <span class="body"></span>
+                  </div>
+                  <small>Seguro</small>
+                  <button class="avatar-tool" aria-label="Configurar avatar">+</button>
+                </div>
+
+                <label class="field">
+                  <span>Nome de exibição</span>
+                  <input type="text" value="Alex Sterling" aria-label="Nome de exibição">
+                </label>
+
+                <label class="field">
+                  <span>Cargo profissional</span>
+                  <input type="text" value="Arquiteto Sênior de Sistemas" aria-label="Cargo profissional">
+                </label>
+
+                <label class="field field-wide">
+                  <span>Bio / declaração de missão</span>
+                  <textarea aria-label="Bio ou declaração de missão">Otimizando energia cinética em ecossistemas digitais.
+Instrutor líder da Lab Alpha.</textarea>
+                </label>
+              </div>
+            </article>
+
+            <article class="panel settings-card preferences-card">
+              <h3><span class="settings-icon">≡</span>Preferências</h3>
+              <div class="settings-option-block">
+                <span>Interface visual</span>
+                <small class="theme-status">Modo escuro ativo</small>
+                <div class="mode-switch" aria-label="Modo escuro ativo">
+                  <button class="active" type="button" data-theme="dark" aria-label="Ativar modo escuro">☾</button>
+                  <button type="button" data-theme="light" aria-label="Ativar modo claro">☼</button>
+                </div>
+              </div>
+              <div class="settings-option-list">
+                <span>Notificações</span>
+                <label class="switch-row">
+                  <span>Pings neurais</span>
+                  <input type="checkbox" checked aria-label="Pings neurais">
+                  <i></i>
+                </label>
+                <label class="switch-row">
+                  <span>Alertas de conquistas</span>
+                  <input type="checkbox" aria-label="Alertas de conquistas">
+                  <i></i>
+                </label>
+              </div>
+            </article>
+
+            <article class="panel settings-card security-card">
+              <div class="settings-card-header">
+                <h3><span class="settings-icon danger">◈</span>Protocolo de Segurança</h3>
+                <span class="secure-badge">Nível 4 seguro</span>
+              </div>
+              <button class="security-action">
+                <span>
+                  <strong>Criptografia de senha</strong>
+                  <small>Último ciclo há 14 dias</small>
+                </span>
+                <b>›</b>
+              </button>
+            </article>
+
+            <article class="panel settings-card gamification-card">
+              <span class="admin-badge">Acesso admin</span>
+              <h3><span class="settings-icon magic">✣</span>Ajuste de Gamificação</h3>
+              <div class="multiplier">
+                <span>Multiplicador de pontos XP</span>
+                <strong>x1,75</strong>
+              </div>
+              <div class="settings-progress">
+                <i style="width: 75%"></i>
+              </div>
+              <div class="progress-labels">
+                <span>Padrão</span>
+                <span>Intenso</span>
+              </div>
+              <label class="switch-row wide">
+                <span>Visibilidade global de emblemas</span>
+                <input type="checkbox" checked aria-label="Visibilidade global de emblemas">
+                <i></i>
+              </label>
+              <label class="switch-row wide">
+                <span>Redefinição de prestígio ativada</span>
+                <input type="checkbox" aria-label="Redefinição de prestígio ativada">
+                <i></i>
+              </label>
+            </article>
+          </div>
+
+          <footer class="settings-actions">
+            <button class="cancel-button">Cancelar</button>
+            <button class="save-button">Salvar alterações</button>
+          </footer>
+        </div>
+      </section>
+
+      <section class="page" id="admin">
+        <div class="admin-page">
+          <section class="admin-area" aria-labelledby="admin-title">
+            <div class="admin-heading">
+              <div>
+                <span class="admin-kicker">Painel restrito</span>
+                <h3 id="admin-title">Administrador</h3>
+              </div>
+              <button class="admin-link" type="button" data-admin-detail="ranking">Ver relatório completo</button>
+            </div>
+
+            <div class="admin-metrics">
+              <button class="admin-metric" type="button" data-admin-detail="conclusao">
+                <span>Conclusão global</span>
+                <strong>84,2%</strong>
+                <small>+3,1% no mês</small>
+              </button>
+              <button class="admin-metric purple" type="button" data-admin-detail="desempenho">
+                <span>Desempenho médio</span>
+                <strong>792</strong>
+                <small>pontos por colaborador</small>
+              </button>
+              <button class="admin-metric blue" type="button" data-admin-detail="colaboradores">
+                <span>Colaboradores ativos</span>
+                <strong>1.284</strong>
+                <small>96 novos acessos</small>
+              </button>
+            </div>
+
+            <div class="admin-dashboard">
+              <article class="admin-status">
+                <h4>Status dos treinamentos</h4>
+                <button class="status-ring" type="button" data-admin-detail="status" aria-label="Abrir detalhes dos status dos treinamentos">
+                  <span>12</span>
+                  <small>módulos</small>
+                </button>
+                <ul class="status-summary">
+                  <li><i class="dot done-dot"></i><span>Concluídos</span><strong>45%</strong></li>
+                  <li><i class="dot progress-dot"></i><span>Em progresso</span><strong>30%</strong></li>
+                  <li><i class="dot late-dot"></i><span>Atrasados</span><strong>15%</strong></li>
+                  <li><i class="dot idle-dot"></i><span>Não iniciados</span><strong>10%</strong></li>
+                </ul>
+              </article>
+
+              <article class="admin-ranking">
+                <div class="ranking-header">
+                  <div>
+                    <h4>Ranking global de talentos</h4>
+                    <p>Dados atualizados há 2 minutos</p>
+                  </div>
+                  <button class="admin-link" type="button" data-admin-detail="ranking">Ver todos</button>
+                </div>
+
+                <div class="ranking-table">
+                  <div class="ranking-labels">
+                    <span>Rank</span>
+                    <span>Colaborador</span>
+                    <span>Progresso</span>
+                    <span>Pontuação</span>
+                  </div>
+                  <button class="ranking-row" type="button" data-admin-detail="alex">
+                    <span class="rank-pill top">01</span>
+                    <strong>Alex Mercer<small>Segurança digital</small></strong>
+                    <span class="ranking-progress"><i style="width: 98%"></i><b>98%</b></span>
+                    <em>12.450</em>
+                  </button>
+                  <button class="ranking-row" type="button" data-admin-detail="sarah">
+                    <span class="rank-pill">02</span>
+                    <strong>Sarah Connor<small>Otimização operacional</small></strong>
+                    <span class="ranking-progress"><i style="width: 85%"></i><b>85%</b></span>
+                    <em>10.120</em>
+                  </button>
+                  <button class="ranking-row" type="button" data-admin-detail="david">
+                    <span class="rank-pill">03</span>
+                    <strong>David Lightman<small>Engenharia de IA</small></strong>
+                    <span class="ranking-progress"><i style="width: 72%"></i><b>72%</b></span>
+                    <em>9.840</em>
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <aside class="admin-detail-panel" aria-live="polite">
+              <div>
+                <span>Detalhes do administrador</span>
+                <h4 data-admin-title>Selecione um item</h4>
+              </div>
+              <p data-admin-description>Clique em uma métrica, no status ou em um colaborador para abrir informações administrativas detalhadas.</p>
+            </aside>
+
+            <div class="admin-modal" hidden role="dialog" aria-modal="true" aria-labelledby="admin-modal-title">
+              <div class="admin-modal-backdrop" data-admin-close></div>
+              <section class="admin-modal-card">
+                <button class="admin-modal-close" type="button" data-admin-close aria-label="Fechar detalhes">×</button>
+                <span>Visão do administrador</span>
+                <h4 id="admin-modal-title" data-admin-modal-title>Detalhes</h4>
+                <p data-admin-modal-description>Informações detalhadas do item selecionado.</p>
+                <div class="admin-modal-actions">
+                  <button type="button" data-admin-close>Fechar</button>
+                  <button type="button">Exportar relatório</button>
+                </div>
+              </section>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
