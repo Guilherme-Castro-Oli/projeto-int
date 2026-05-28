@@ -1,18 +1,55 @@
 .layout {
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  min-height: 100vh;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    min-height: 100vh;
+    outline: none;
 }
 
 .sidebar {
-  background: linear-gradient(180deg, #0a1223 0%, #080f1d 100%);
-  border-right: 1px solid var(--line);
-  padding: 24px 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+    background: linear-gradient(180deg, #0a1223 0%, #080f1d 100%);
+    border-right: 1px solid var(--line);
+    padding: 24px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .content {
-  padding: 18px 20px 24px;
+    padding: 18px 20px 24px;
+}
+
+.topbar {
+    display: grid;
+    grid-template-columns: minmax(220px, 1fr) auto auto;
+    align-items: center;
+    gap: 14px;
+}
+
+.hero {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.section-grid,
+.settings-grid {
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.cards {
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.list {
+    margin-top: 22px;
+    display: grid;
+    gap: 12px;
 }

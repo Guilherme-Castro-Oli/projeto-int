@@ -1,22 +1,329 @@
-.admin-area {
-  margin-top: 28px;
-  background: rgba(19, 23, 35, 0.92);
-  padding: 28px;
+/* =========================
+   ADMIN PAGE
+========================= */
+
+.admin-page {
+    padding-top: 2px;
 }
 
+.admin-area {
+    margin-top: 28px;
+    border-radius: 8px;
+    background: rgba(19, 23, 35, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 28px;
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.28);
+}
+
+/* =========================
+   HEADERS
+========================= */
+
+.admin-heading,
+.ranking-header,
+.ranking-labels,
+.ranking-row,
+.admin-metrics,
+.admin-dashboard {
+    display: grid;
+    gap: 18px;
+}
+
+.admin-heading {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.admin-kicker,
+.admin-area h4,
+.admin-detail-panel span,
+.admin-metric span,
+.ranking-labels span {
+    color: #8b95ad;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+
+.admin-area h3 {
+    margin-top: 6px;
+    font-size: 28px;
+}
+
+.admin-link {
+    border: 0;
+    background: transparent;
+    color: #5ce5ff;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+/* =========================
+   METRICS
+========================= */
+
 .admin-metrics {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+    margin-top: 22px;
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
 }
 
 .admin-metric {
-  padding: 20px;
-  border-radius: 8px;
-  background: #1b1f2d;
+    min-height: 138px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    background: linear-gradient(
+        145deg,
+        rgba(27, 31, 45, 0.96),
+        rgba(21, 25, 37, 0.96)
+    );
+
+    color: #e9eeff;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 22px;
+    text-align: left;
+
+    transition:
+        transform 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease;
 }
 
-.admin-modal {
-  position: fixed;
-  inset: 0;
+.admin-metric:hover,
+.ranking-row:hover {
+    transform: translateY(-2px);
+    border-color: rgba(92, 229, 255, 0.42);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.28);
+}
+
+.admin-metric strong {
+    display: block;
+    margin-top: 16px;
+    color: #c8ffbd;
+    font-size: 40px;
+    line-height: 1;
+}
+
+.admin-metric.purple strong {
+    color: #f0a4ff;
+}
+
+.admin-metric.blue strong {
+    color: #eef4ff;
+}
+
+.admin-metric small {
+    display: block;
+    margin-top: 8px;
+    color: #9be593;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.admin-metric.purple small,
+.admin-metric.blue small {
+    color: #6fe7ff;
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.admin-dashboard {
+    margin-top: 28px;
+    grid-template-columns:
+        minmax(220px, 0.75fr)
+        minmax(360px, 1.55fr);
+}
+
+.admin-status,
+.admin-ranking,
+.admin-detail-panel {
+    border-radius: 8px;
+    background: rgba(27, 31, 45, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 26px;
+}
+
+.admin-status h4,
+.admin-ranking h4,
+.admin-detail-panel h4 {
+    color: #eff4ff;
+    font-size: 15px;
+    letter-spacing: 0;
+}
+
+/* =========================
+   STATUS RING
+========================= */
+
+.status-ring {
+    width: min(160px, 100%);
+    aspect-ratio: 1;
+
+    margin: 28px auto 26px;
+
+    border: 10px solid #ec9aff;
+    border-radius: 50%;
+
+    background: transparent;
+    color: #f2f5ff;
+
+    display: grid;
+    place-items: center;
+
+    font-family: inherit;
+}
+
+.status-ring span,
+.status-ring small {
+    display: block;
+    text-align: center;
+}
+
+.status-ring span {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.status-ring small {
+    color: #8f99af;
+    font-size: 9px;
+    text-transform: uppercase;
+}
+
+/* =========================
+   STATUS SUMMARY
+========================= */
+
+.status-summary {
+    list-style: none;
+    display: grid;
+    gap: 15px;
+}
+
+.status-summary li {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 10px;
+
+    color: #c9d1e3;
+    font-size: 13px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.done-dot {
+    background: #c8ffbd;
+}
+
+.progress-dot {
+    background: #54dfff;
+}
+
+.late-dot {
+    background: #ec9aff;
+}
+
+.idle-dot {
+    background: #4d566c;
+}
+
+/* =========================
+   RANKING
+========================= */
+
+.ranking-header {
+    grid-template-columns: 1fr auto;
+    align-items: start;
+}
+
+.ranking-header p {
+    margin-top: 6px;
+    color: #8c96ad;
+    font-size: 12px;
+}
+
+.ranking-table {
+    margin-top: 28px;
+    display: grid;
+    gap: 16px;
+}
+
+.ranking-labels,
+.ranking-row {
+    grid-template-columns:
+        60px
+        minmax(150px, 1fr)
+        minmax(150px, 1fr)
+        90px;
+
+    align-items: center;
+}
+
+.ranking-row {
+    width: 100%;
+
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+    background: transparent;
+    color: #e9eeff;
+
+    cursor: pointer;
+
+    font-family: inherit;
+    padding: 10px 0;
+    text-align: left;
+}
+
+.rank-pill {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #d50cff, #8a2eff);
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.ranking-progress {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: center;
+
+    color: #c8ffbd;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.ranking-progress i {
+    display: block;
+    height: 5px;
+    border-radius: 99px;
+    background: #59defa;
+}
+
+.ranking-row:first-of-type .ranking-progress i {
+    background: #c8ffbd;
+}
+
+.ranking-row em {
+    color: #dbe2f5;
+    font-style: normal;
+    font-weight: 800;
+    text-align: right;
 }

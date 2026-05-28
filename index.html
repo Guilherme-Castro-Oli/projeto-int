@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PROJETO INTEGRADOR</title>
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
@@ -13,6 +12,7 @@
   <link rel="stylesheet" href="css/admin.css">
   <link rel="stylesheet" href="css/themes.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/settings.css">
 </head>
 
 <body>
@@ -37,10 +37,6 @@
     <main class="content">
       <header class="topbar">
         <input type="search" placeholder="Buscar módulos...">
-        <div class="tabs">
-          <button class="tab active">Módulos</button>
-          <button class="tab">Recursos</button>
-        </div>
         <div class="profile">
           <div class="profile-meta">
             <strong>Nome do usuario</strong>
@@ -157,7 +153,7 @@
               <span>+500 XP</span>
             </div>
             <div class="progress"><i style="width:100%"></i></div>
-            <button>Revisar módulo</button>
+            <a href="questionario/quest.html"><button>Iniciar agora</button></a>
           </article>
 
           <article class="card progress-card" data-status="em-andamento">
@@ -169,7 +165,7 @@
               <span>+1200 XP</span>
             </div>
             <div class="progress"><i style="width:64%"></i></div>
-            <button>Continuar treinamento</button>
+            <a href="questionario/quest.html"><button>Iniciar agora</button></a>
           </article>
 
           <article class="card not-started" data-status="nao-iniciado">
@@ -181,7 +177,7 @@
               <span>+800 XP</span>
             </div>
             <div class="progress"><i style="width:0%"></i></div>
-            <button>Iniciar agora</button>
+            <a href="questionario/quest.html"><button>Iniciar agora</button></a>
           </article>
 
           <article class="card governance" data-status="nao-iniciado">
@@ -193,7 +189,7 @@
               <span>+900 XP</span>
             </div>
             <div class="progress"><i style="width:0%"></i></div>
-            <button>Iniciar agora</button>
+            <a href="questionario/quest.html"><button>Iniciar agora</button></a>
           </article>
 
           <article class="card tech" data-status="em-andamento">
@@ -205,7 +201,7 @@
               <span>+1400 XP</span>
             </div>
             <div class="progress"><i style="width:36%"></i></div>
-            <button>Continuar treinamento</button>
+           <a href="questionario/quest.html"><button>Iniciar agora</button></a>
           </article>
         </section>
       </section>
@@ -239,10 +235,10 @@
             <span>#02</span><strong>Pedro Lima</strong><em>Segurança da Informação</em><b>17,2k XP</b>
           </article>
           <article class="list-row me">
-            <span>#08</span><strong>Alex Chen</strong><em>Boas Práticas Técnicas</em><b>12,4k XP</b>
+            <span>#03</span><strong>Alex Chen</strong><em>Boas Práticas Técnicas</em><b>12,4k XP</b>
           </article>
           <article class="list-row">
-            <span>#09</span><strong>Marina Alves</strong><em>Processos Internos</em><b>11,8k XP</b>
+            <span>#04</span><strong>Marina Alves</strong><em>Processos Internos</em><b>11,8k XP</b>
           </article>
         </div>
       </section>
@@ -273,7 +269,6 @@
                     <span class="head"></span>
                     <span class="body"></span>
                   </div>
-                  <small>Seguro</small>
                   <button class="avatar-tool" aria-label="Configurar avatar">+</button>
                 </div>
 
@@ -428,34 +423,9 @@ Instrutor líder da Lab Alpha.</textarea>
                 </div>
               </article>
             </div>
-
-            <aside class="admin-detail-panel" aria-live="polite">
-              <div>
-                <span>Detalhes do administrador</span>
-                <h4 data-admin-title>Selecione um item</h4>
-              </div>
-              <p data-admin-description>Clique em uma métrica, no status ou em um colaborador para abrir informações
-                administrativas detalhadas.</p>
-            </aside>
-
-            <div class="admin-modal" hidden role="dialog" aria-modal="true" aria-labelledby="admin-modal-title">
-              <div class="admin-modal-backdrop" data-admin-close></div>
-              <section class="admin-modal-card">
-                <button class="admin-modal-close" type="button" data-admin-close aria-label="Fechar detalhes">×</button>
-                <span>Visão do administrador</span>
-                <h4 id="admin-modal-title" data-admin-modal-title>Detalhes</h4>
-                <p data-admin-modal-description>Informações detalhadas do item selecionado.</p>
-                <div class="admin-modal-actions">
-                  <button type="button" data-admin-close>Fechar</button>
-                  <button type="button">Exportar relatório</button>
-                </div>
-              </section>
-            </div>
           </section>
-
-
         </div>
-
+        </section>
 
     </main>
 
